@@ -15,7 +15,8 @@ class SystemCommands(kp.Plugin):
     KEYWORD_LOGOUT = "logout"
     KEYWORD_SHUTDOWN = "shutdown"
     KEYWORD_RESTART = "restart"
-    
+    KEYWORD_SLEEP = "sleep"
+
     _system_actions = {}
     
     def __init__(self):
@@ -68,6 +69,7 @@ class SystemCommands(kp.Plugin):
         icon_logout = self._load_resource_image('system-logout-icon.png')
         icon_shutdown = self._load_resource_image('system-shutdown-icon.png')
         icon_restart = self._load_resource_image('system-restart-icon.png')
+        icon_sleep = self._load_resource_image('system-sleep-icon.png')
 
         self._system_actions[self.KEYWORD_EMPTY_RECYCLEBIN] = SystemAction(
             self.KEYWORD_EMPTY_RECYCLEBIN,
@@ -109,6 +111,13 @@ class SystemCommands(kp.Plugin):
             'Restart the computer.',
             icon_restart,
             functions.Restart
+        )
+
+        self._system_actions[self.KEYWORD_SLEEP] = SystemAction(
+            self.KEYWORD_SLEEP,
+            'Put the computer to sleep.',
+            icon_sleep,
+            functions.Sleep
         )
 
     def _load_resource_image(self, image_name):
