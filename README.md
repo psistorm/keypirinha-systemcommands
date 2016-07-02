@@ -10,6 +10,7 @@ This plugin for Keypirinha provides several system commands.
 * restart - Restarts Windows
 * shutdown - Shutdown Windows
 * sleep - Sleep Windows
+* hibernate - Hibernate Windows
 
 
 ## Release Notes: ##
