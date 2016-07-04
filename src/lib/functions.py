@@ -23,9 +23,15 @@ def LockWorkStation():
 
 def Logout():
     windll.user32.ExitWindowsEx(EWX_LOGOFF, 1)
-    
+
 def Restart():
     subprocess.call(["shutdown.exe", "-r", "-t", "0"], creationflags=CREATE_NO_WINDOW)
-    
+
+def Sleep():
+    windll.PowrProf.SetSuspendState(0, 1, 0)
+
+def Hibernate():
+    windll.PowrProf.SetSuspendState(1, 1, 0)
+
 def Shutdown():
     subprocess.call(["shutdown.exe", "-s", "-t", "0"], creationflags=CREATE_NO_WINDOW)

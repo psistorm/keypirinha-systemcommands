@@ -9,6 +9,8 @@ This plugin for Keypirinha provides several system commands.
 * logout - Logout current User from Windows
 * restart - Restarts Windows
 * shutdown - Shutdown Windows
+* sleep - Sleep Windows
+* hibernate - Hibernate Windows
 
 
 ## Release Notes: ##
