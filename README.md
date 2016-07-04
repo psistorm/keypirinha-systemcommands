@@ -22,4 +22,4 @@ V 1.1:
 - Added sleep and hibernate mode (Thanks to [wwwald](https://github.com/wwwald))
 
 V 1.0:
-First release of plugin.
+- First release of plugin.
