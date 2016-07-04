@@ -12,6 +12,9 @@ This plugin for Keypirinha provides several system commands.
 * sleep - Sleep Windows
 * hibernate - Hibernate Windows
 
+## License: ##
+
+All icons from Windows 8 Metro Icons by [dAKirby309](http://dakirby309.deviantart.com/gallery/#/d4n4w3q) licensed under [CC Attribution-Noncommercial 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ## Release Notes: ##
 
