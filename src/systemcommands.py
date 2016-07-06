@@ -18,10 +18,10 @@ class SystemCommands(kp.Plugin):
     KEYWORD_SLEEP = "sleep"
     KEYWORD_HIBERNATE = "hibernate"
 
-    _system_actions = {}
-    
     def __init__(self):
         super().__init__()
+
+        self._system_actions = {}
     
     def __del__(self):
         self._clean_icons()
