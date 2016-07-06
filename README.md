@@ -18,8 +18,8 @@ All icons from Windows 8 Metro Icons by [dAKirby309](http://dakirby309.deviantar
 
 ## Release Notes ##
 
-V 1.1:
+**V 1.1**
 - Added sleep and hibernate mode (Thanks to [wwwald](https://github.com/wwwald))
 
-V 1.0:
+**V 1.0**
 - First release of plugin.
