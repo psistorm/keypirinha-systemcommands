@@ -130,7 +130,10 @@ class SystemCommands(kp.Plugin):
         )
 
     def _load_resource_image(self, image_name):
-        return self.load_icon('res://SystemCommands/icons/{}'.format(image_name))
+        return self.load_icon('res://{package}/icons/{image}'.format(
+            package=self.package_full_name(),
+            image=image_name)
+        )
 
 
 class SystemAction():
