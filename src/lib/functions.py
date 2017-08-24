@@ -18,6 +18,9 @@ def EmptyRecycleBin():
 def OpenRecycleBin():
     subprocess.call(["cmd", "/c", "start", "shell:RecycleBinFolder"], creationflags=CREATE_NO_WINDOW)
 
+def OpenThisPC():
+    subprocess.call(["cmd", "/c", "start", "shell:MyComputerFolder"], creationflags=CREATE_NO_WINDOW)
+
 def LockWorkStation():
     windll.user32.LockWorkStation()
 
