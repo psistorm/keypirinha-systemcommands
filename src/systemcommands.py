@@ -11,6 +11,7 @@ class SystemCommands(kp.Plugin):
 
     KEYWORD_EMPTY_RECYCLEBIN = "emptytrash"
     KEYWORD_SHOW_RECYCLEBIN = "trash"
+    KEYWORD_SHOW_THISPC = "thispc"
     KEYWORD_LOCKSCREEN = "lock"    
     KEYWORD_LOGOUT = "logout"
     KEYWORD_SHUTDOWN = "shutdown"
@@ -66,6 +67,7 @@ class SystemCommands(kp.Plugin):
     def _initialize_actions(self):
         icon_empty_recycle_bin = self._load_resource_image('system-emptytrash-icon.png')
         icon_show_recycle_bin = self._load_resource_image('system-trashbin-icon.png')
+        icon_show_thispc = self._load_resource_image('devices-computer-icon.png')
         icon_lockscreen = self._load_resource_image('system-lock-icon.png')
         icon_logout = self._load_resource_image('system-logout-icon.png')
         icon_shutdown = self._load_resource_image('system-shutdown-icon.png')
@@ -85,6 +87,13 @@ class SystemCommands(kp.Plugin):
             'Show the recycle bin.',
             icon_show_recycle_bin,
             functions.OpenRecycleBin
+        )
+
+        self._system_actions[self.KEYWORD_SHOW_THISPC] = SystemAction(
+            self.KEYWORD_SHOW_THISPC,
+            'Show This PC.',
+            icon_show_thispc,
+            functions.OpenThisPC
         )
 
         self._system_actions[self.KEYWORD_LOCKSCREEN] = SystemAction(
