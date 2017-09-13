@@ -17,6 +17,7 @@ class SystemCommands(kp.Plugin):
     KEYWORD_RESTART = "restart"
     KEYWORD_SLEEP = "sleep"
     KEYWORD_HIBERNATE = "hibernate"
+    KEYWORD_STARTUP = "startup"
 
     def __init__(self):
         super().__init__()
@@ -72,6 +73,7 @@ class SystemCommands(kp.Plugin):
         icon_restart = self._load_resource_image('system-restart-icon.png')
         icon_sleep = self._load_resource_image('system-sleep-icon.png')
         icon_hibernate = self._load_resource_image('system-hibernate-icon.png')
+        icon_startup = self._load_resource_image('system-startup-icon.png')
 
         self._system_actions[self.KEYWORD_EMPTY_RECYCLEBIN] = SystemAction(
             self.KEYWORD_EMPTY_RECYCLEBIN,
@@ -127,6 +129,13 @@ class SystemCommands(kp.Plugin):
             'Hibernate the computer.',
             icon_hibernate,
             functions.Hibernate
+        )
+
+        self._system_actions[self.KEYWORD_STARTUP] = SystemAction(
+            self.KEYWORD_STARTUP,
+            'Show startup programs.',
+            icon_startup,
+            functions.Startup
         )
 
     def _load_resource_image(self, image_name):
