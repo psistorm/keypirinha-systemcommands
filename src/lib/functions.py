@@ -35,3 +35,9 @@ def Hibernate():
 
 def Shutdown():
     subprocess.call(["shutdown.exe", "-s", "-t", "0"], creationflags=CREATE_NO_WINDOW)
+
+def OpenDownloads():
+    subprocess.call(["cmd", "/c", "start", "shell:Downloads"], creationflags=CREATE_NO_WINDOW)
+
+def OpenDesktop():
+    subprocess.call(["cmd", "/c", "start", "shell:Desktop"], creationflags=CREATE_NO_WINDOW)
