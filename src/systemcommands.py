@@ -17,6 +17,8 @@ class SystemCommands(kp.Plugin):
     KEYWORD_RESTART = "restart"
     KEYWORD_SLEEP = "sleep"
     KEYWORD_HIBERNATE = "hibernate"
+    KEYWORD_SHOW_DOWNLOADS = "downloads"
+    KEYWORD_SHOW_DESKTOP = "desktop"
 
     def __init__(self):
         super().__init__()
@@ -72,6 +74,8 @@ class SystemCommands(kp.Plugin):
         icon_restart = self._load_resource_image('system-restart-icon.png')
         icon_sleep = self._load_resource_image('system-sleep-icon.png')
         icon_hibernate = self._load_resource_image('system-hibernate-icon.png')
+        icon_show_downloads = self._load_resource_image('system-downloads-folder.png')
+        icon_show_desktop = self._load_resource_image('system-desktop-folder.png')
 
         self._system_actions[self.KEYWORD_EMPTY_RECYCLEBIN] = SystemAction(
             self.KEYWORD_EMPTY_RECYCLEBIN,
@@ -128,6 +132,21 @@ class SystemCommands(kp.Plugin):
             icon_hibernate,
             functions.Hibernate
         )
+
+        self._system_actions[self.KEYWORD_SHOW_DOWNLOADS] = SystemAction(
+            self.KEYWORD_SHOW_DOWNLOADS,
+            'Show the downloads folder.',
+            icon_show_downloads,
+            functions.OpenDownloads
+        )
+
+        self._system_actions[self.KEYWORD_SHOW_DESKTOP] = SystemAction(
+            self.KEYWORD_SHOW_DESKTOP,
+            'Show the desktop folder.',
+            icon_show_desktop,
+            functions.OpenDesktop
+        )
+        
 
     def _load_resource_image(self, image_name):
         return self.load_icon('res://{package}/icons/{image}'.format(
